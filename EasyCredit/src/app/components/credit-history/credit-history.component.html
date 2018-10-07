@@ -1,0 +1,48 @@
+<div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-12 col-md-10 col-lg-8 p-5">
+			<div class="card shadow">				
+				<div class="card-body">
+
+					<div class="d-flex justify-content-start">
+						<h2 class="display-5 text-info">Historial Crediticio</h2>
+					</div>
+
+					<hr>
+
+					<div class="d-flex justify-content-start">
+						<h3 class="display-5 text-dark">{{ identity.username }}</h3>
+					</div>
+
+					<table class="table">
+					  <thead class="thead-light">
+					    <tr>
+					      <th scope="col">Monto</th>
+					      <th scope="col">Plazo</th>
+					      <th scope="col">Total a pagar</th>
+					      <th scope="col">Fecha Actualizado</th>
+					      <th scope="col">Estatus</th>
+					    </tr>
+					  </thead>
+					  <tbody *ngFor="let request of requests">
+					    <tr *ngIf="request.status == 0 || request.status == 2">
+					      <td>{{ request.quantity }}</td>
+					      <td>
+					      	<span *ngIf="request.dead_line == 5">3 Meses</span>
+					      	<span *ngIf="request.dead_line == 7">6 Meses</span>
+					      	<span *ngIf="request.dead_line == 12">9 Meses</span>
+					      </td>
+					      <td>{{ request.total }}</td>
+					      <td>{{ request.updated_at | date:"MM/dd/yyyy" }}</td>
+					      <td>
+					      	<span *ngIf="request.status == 0" class="badge badge-danger">Rechazada</span>
+					      	<span *ngIf="request.status == 2" class="badge badge-success">Aprobada</span>
+					      </td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

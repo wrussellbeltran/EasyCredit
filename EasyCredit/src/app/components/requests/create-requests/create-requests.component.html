@@ -1,0 +1,68 @@
+<div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-12 col-sm-10 col-md-8 col-lg-6 p-5">
+			<div class="card shadow">
+				<div class="card-body">
+					<form (ngSubmit)="onSubmit(requestForm)" #requestForm="ngForm">
+						<div class="d-flex justify-content-start">
+							<h2 class="display-5 text-info">Registro de solicitud</h2>
+						</div>
+
+						<hr>
+
+						<input type="text" class="form-control" id="user_id" name="user_id" #user_id="ngModel" [(ngModel)]="request.user_id" hidden>
+
+						<div class="form-group">
+						    <label for="quantity" class="font-weight-bold">¿Cuánto dinero necesitas?</label>
+						    <input type="text" class="form-control" id="quantity" name="quantity" #quantity="ngModel" [(ngModel)]="request.quantity" (keypress)="onlyNumberKey($event)" (keyup)="onChange($event)" placeholder="Monto a solicitar" required maxlength="7">
+						    <span *ngIf="!quantity.valid && quantity.touched" class="text-danger">El monto no es válido</span>
+						</div>
+
+						<div class="custom-control custom-checkbox">
+						  <input type="checkbox" class="custom-control-input" id="card" name="card" #card="ngModel" [(ngModel)]="request.card">
+						  <label class="custom-control-label" for="card">¿Tiene tarjeta de crédito?</label>
+						</div>
+						<br>
+
+						<div class="form-group">
+						    <label for="age" class="font-weight-bold">¿Edad?</label>
+						    <input type="text" class="form-control" id="age" name="age" #age="ngModel" [(ngModel)]="request.age" placeholder="Edad" required (keypress)="onlyNumberKey($event)" minlength="2" maxlength="2">
+						    <span *ngIf="!age.valid && age.touched" class="text-danger">La edad no es válido</span>
+						</div>
+
+						<div class="form-group">
+						    <label for="dead_line" class="font-weight-bold">¿En cuánto tiempo lo quieres pagar?</label>
+						    <select class="form-control" id="dead_line" name="dead_line" #dead_line="ngModel" [(ngModel)]="request.dead_line" (change)="onChange($event)" required>
+							      <option [value]="5">3 Meses</option>
+							      <option [value]="7">6 Meses</option>
+							      <option [value]="12">9 Meses</option>
+							</select>
+							<span *ngIf="!dead_line.valid && dead_line.touched" class="text-danger">El plazo no es válido</span>							
+					    </div>
+
+					    <div *ngIf="request.dead_line && request.quantity" class="form-group">
+						    	<label for="total" class="font-weight-bold">Pago Total</label>
+						    	<input type="number" class="form-control" id="total" name="total" #total="ngModel" [(ngModel)]="request.total" disabled required>
+						    </div>
+
+					  	<div class="form-group">
+		                    <button type="submit" class="btn btn-primary" [disabled]="!requestForm.valid">
+		                        Guardar
+		                    </button>
+		                </div>
+
+				  		<div class="mt-3">
+					  		<div class="alert alert-success" *ngIf="status == 'success'" >
+						    	Solicitud generada !!
+						 	</div>
+
+							<div class="alert alert-danger" *ngIf="status == 'error'" >
+							    No se pudo generar la solicitud !!
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,964 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>easy-credit documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">easy-credit documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CreateRequestsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/requests/create-requests/create-requests.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code><a href="../injectables/RequestService.html" target="_self" >RequestService</a></code>
+                            <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-create-requests</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>create-requests.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./create-requests.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#identity">identity</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#request">request</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#status">status</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#token">token</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#total">total</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onChange">onChange</a>
+                            </li>
+                            <li>
+                                <a href="#onlyNumberKey">onlyNumberKey</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit">onSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, requestService: <a href="../injectables/RequestService.html">RequestService</a>, userService: <a href="../injectables/UserService.html">UserService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/requests/create-requests/create-requests.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor, asigna los datos del usuario de la sesión, el token e inicializa la entidad request.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>requestService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/RequestService.html" target="_self" >RequestService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/requests/create-requests/create-requests.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Método de inicialización, verifica si la sesión se encuentra activa y asigna el id del usuario.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onChange"></a>
+                        <span class="name">
+                            <b>
+                            onChange
+                            </b>
+                            <a href="#onChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onChange(event: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/components/requests/create-requests/create-requests.component.ts:74</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Se ejecuta cuando se hace un cambio de plazo para recalcular el valor total.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Recibe el evento.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onlyNumberKey"></a>
+                        <span class="name">
+                            <b>
+                            onlyNumberKey
+                            </b>
+                            <a href="#onlyNumberKey"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onlyNumberKey(event: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/components/requests/create-requests/create-requests.component.ts:83</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Permite agregar solo numeros.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Recibe la tecla presionada.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onSubmit"></a>
+                        <span class="name">
+                            <b>
+                            onSubmit
+                            </b>
+                            <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onSubmit(form: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/components/requests/create-requests/create-requests.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Recibe el formulario con los valores capturados y registra la solicitud.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>form</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Recibe los datos capturados en el formulario.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="identity"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            identity
+                            </b>
+                            <a href="#identity"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>identity:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/requests/create-requests/create-requests.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="request"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            request
+                            </b>
+                            <a href="#request"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>request:     <code><a href="../classes/Request.html" target="_self" >Request</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/Request.html" target="_self" >Request</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/requests/create-requests/create-requests.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="status"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            status
+                            </b>
+                            <a href="#status"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>status:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/requests/create-requests/create-requests.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="token"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            token
+                            </b>
+                            <a href="#token"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>token:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/requests/create-requests/create-requests.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="total"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            total
+                            </b>
+                            <a href="#total"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>total:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/requests/create-requests/create-requests.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router, ActivatedRoute, Params } from &#x27;@angular/router&#x27;;
+import { Request } from &#x27;../../../models/request&#x27;;
+import { RequestService	} from &#x27;../../../services/request.service&#x27;;
+import { UserService } from &#x27;../../../services/user.service&#x27;;
+
+@Component({
+  selector: &#x27;app-create-requests&#x27;,
+  templateUrl: &#x27;./create-requests.component.html&#x27;,
+  styleUrls: [&#x27;./create-requests.component.css&#x27;],
+  providers: [RequestService, UserService]
+})
+export class CreateRequestsComponent implements OnInit {
+	public request: Request;
+	public status: string;
+	public token;
+  public identity;
+  public total;
+
+  /**
+   * Constructor, asigna los datos del usuario de la sesión, el token e inicializa la entidad request.
+   * @param {ActivatedRoute} private route          Contiene informacion sobre una ruta asociada con un componente.
+   * @param {Router}         private router         Proporciona las capacidades de navegación y manipulación de url.
+   * @param {RequestService} private requestService Comparte la información de la clase RequestService.
+   * @param {UserService}    private userService    Comparte la información de la clase UserService.
+   */
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private requestService: RequestService,
+              private userService: UserService) {
+  		this.request &#x3D; new Request(1,0,&#x27;&#x27;,&#x27;&#x27;,false,&#x27;&#x27;,0,0);
+  		this.identity &#x3D; this.userService.getIdentity();
+    	this.token &#x3D; this.userService.getToken();
+    }
+
+   /**
+   * Método de inicialización, verifica si la sesión se encuentra activa y asigna el id del usuario.
+   */
+  ngOnInit() {
+
+  	if (this.identity &#x3D;&#x3D; null) {
+      this.router.navigate([&#x27;/&#x27;]);
+    }
+    else{
+    	this.request.user_id &#x3D; this.identity.sub;
+    }
+  }
+
+  /**
+   * Recibe el formulario con los valores capturados y registra la solicitud.
+   * @param {formGroup} form Recibe los datos capturados en el formulario.
+   */
+  onSubmit(form) {
+    this.requestService.saveRequest(this.request, this.token).subscribe(
+      responseIdentity &#x3D;&gt; {
+        if (responseIdentity.status &#x3D;&#x3D; &#x27;success&#x27;) {
+          this.request &#x3D; responseIdentity.request;
+          this.status &#x3D; &#x27;success&#x27;;
+          this.router.navigate([&#x27;requests&#x27;]);
+        } else {
+          this.status &#x3D; &#x27;error&#x27;;
+        }
+      },
+      error &#x3D;&gt; {
+        console.log(&lt;any&gt;error);
+      }
+    );
+  }
+
+  /**
+   * Se ejecuta cuando se hace un cambio de plazo para recalcular el valor total.
+   * @param {event} event Recibe el evento.
+   */
+  onChange(event) {  	
+   	this.total &#x3D; (parseInt(this.request.quantity) * parseInt(this.request.dead_line)) / 100;
+   	this.request.total &#x3D; this.total + parseInt(this.request.quantity);
+  }
+
+  /**
+   * Permite agregar solo numeros.
+   * @param {event} event Recibe la tecla presionada.
+   */
+  onlyNumberKey(event) {
+    return (event.charCode &#x3D;&#x3D; 8 || event.charCode &#x3D;&#x3D; 0) ? null : event.charCode &gt;&#x3D; 48 &amp;&amp; event.charCode &lt;&#x3D; 57;
+  }
+}
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+	&lt;div class&#x3D;&quot;row justify-content-center&quot;&gt;
+		&lt;div class&#x3D;&quot;col-12 col-sm-10 col-md-8 col-lg-6 p-5&quot;&gt;
+			&lt;div class&#x3D;&quot;card shadow&quot;&gt;
+				&lt;div class&#x3D;&quot;card-body&quot;&gt;
+					&lt;form (ngSubmit)&#x3D;&quot;onSubmit(requestForm)&quot; #requestForm&#x3D;&quot;ngForm&quot;&gt;
+						&lt;div class&#x3D;&quot;d-flex justify-content-start&quot;&gt;
+							&lt;h2 class&#x3D;&quot;display-5 text-info&quot;&gt;Registro de solicitud&lt;/h2&gt;
+						&lt;/div&gt;
+
+						&lt;hr&gt;
+
+						&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;user_id&quot; name&#x3D;&quot;user_id&quot; #user_id&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;request.user_id&quot; hidden&gt;
+
+						&lt;div class&#x3D;&quot;form-group&quot;&gt;
+						    &lt;label for&#x3D;&quot;quantity&quot; class&#x3D;&quot;font-weight-bold&quot;&gt;¿Cuánto dinero necesitas?&lt;/label&gt;
+						    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;quantity&quot; name&#x3D;&quot;quantity&quot; #quantity&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;request.quantity&quot; (keypress)&#x3D;&quot;onlyNumberKey($event)&quot; (keyup)&#x3D;&quot;onChange($event)&quot; placeholder&#x3D;&quot;Monto a solicitar&quot; required maxlength&#x3D;&quot;7&quot;&gt;
+						    &lt;span *ngIf&#x3D;&quot;!quantity.valid &amp;&amp; quantity.touched&quot; class&#x3D;&quot;text-danger&quot;&gt;El monto no es válido&lt;/span&gt;
+						&lt;/div&gt;
+
+						&lt;div class&#x3D;&quot;custom-control custom-checkbox&quot;&gt;
+						  &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;custom-control-input&quot; id&#x3D;&quot;card&quot; name&#x3D;&quot;card&quot; #card&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;request.card&quot;&gt;
+						  &lt;label class&#x3D;&quot;custom-control-label&quot; for&#x3D;&quot;card&quot;&gt;¿Tiene tarjeta de crédito?&lt;/label&gt;
+						&lt;/div&gt;
+						&lt;br&gt;
+
+						&lt;div class&#x3D;&quot;form-group&quot;&gt;
+						    &lt;label for&#x3D;&quot;age&quot; class&#x3D;&quot;font-weight-bold&quot;&gt;¿Edad?&lt;/label&gt;
+						    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;age&quot; name&#x3D;&quot;age&quot; #age&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;request.age&quot; placeholder&#x3D;&quot;Edad&quot; required (keypress)&#x3D;&quot;onlyNumberKey($event)&quot; minlength&#x3D;&quot;2&quot; maxlength&#x3D;&quot;2&quot;&gt;
+						    &lt;span *ngIf&#x3D;&quot;!age.valid &amp;&amp; age.touched&quot; class&#x3D;&quot;text-danger&quot;&gt;La edad no es válido&lt;/span&gt;
+						&lt;/div&gt;
+
+						&lt;div class&#x3D;&quot;form-group&quot;&gt;
+						    &lt;label for&#x3D;&quot;dead_line&quot; class&#x3D;&quot;font-weight-bold&quot;&gt;¿En cuánto tiempo lo quieres pagar?&lt;/label&gt;
+						    &lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;dead_line&quot; name&#x3D;&quot;dead_line&quot; #dead_line&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;request.dead_line&quot; (change)&#x3D;&quot;onChange($event)&quot; required&gt;
+							      &lt;option [value]&#x3D;&quot;5&quot;&gt;3 Meses&lt;/option&gt;
+							      &lt;option [value]&#x3D;&quot;7&quot;&gt;6 Meses&lt;/option&gt;
+							      &lt;option [value]&#x3D;&quot;12&quot;&gt;9 Meses&lt;/option&gt;
+							&lt;/select&gt;
+							&lt;span *ngIf&#x3D;&quot;!dead_line.valid &amp;&amp; dead_line.touched&quot; class&#x3D;&quot;text-danger&quot;&gt;El plazo no es válido&lt;/span&gt;							
+					    &lt;/div&gt;
+
+					    &lt;div *ngIf&#x3D;&quot;request.dead_line &amp;&amp; request.quantity&quot; class&#x3D;&quot;form-group&quot;&gt;
+						    	&lt;label for&#x3D;&quot;total&quot; class&#x3D;&quot;font-weight-bold&quot;&gt;Pago Total&lt;/label&gt;
+						    	&lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;total&quot; name&#x3D;&quot;total&quot; #total&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;request.total&quot; disabled required&gt;
+						    &lt;/div&gt;
+
+					  	&lt;div class&#x3D;&quot;form-group&quot;&gt;
+		                    &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot; [disabled]&#x3D;&quot;!requestForm.valid&quot;&gt;
+		                        Guardar
+		                    &lt;/button&gt;
+		                &lt;/div&gt;
+
+				  		&lt;div class&#x3D;&quot;mt-3&quot;&gt;
+					  		&lt;div class&#x3D;&quot;alert alert-success&quot; *ngIf&#x3D;&quot;status &#x3D;&#x3D; &#x27;success&#x27;&quot; &gt;
+						    	Solicitud generada !!
+						 	&lt;/div&gt;
+
+							&lt;div class&#x3D;&quot;alert alert-danger&quot; *ngIf&#x3D;&quot;status &#x3D;&#x3D; &#x27;error&#x27;&quot; &gt;
+							    No se pudo generar la solicitud !!
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/form&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container-fluid">	<div class="row justify-content-center">		<div class="col-12 col-sm-10 col-md-8 col-lg-6 p-5">			<div class="card shadow">				<div class="card-body">					<form (ngSubmit)="onSubmit(requestForm)" #requestForm="ngForm">						<div class="d-flex justify-content-start">							<h2 class="display-5 text-info">Registro de solicitud</h2>						</div>						<hr>						<input type="text" class="form-control" id="user_id" name="user_id" #user_id="ngModel" [(ngModel)]="request.user_id" hidden>						<div class="form-group">						    <label for="quantity" class="font-weight-bold">¿Cuánto dinero necesitas?</label>						    <input type="text" class="form-control" id="quantity" name="quantity" #quantity="ngModel" [(ngModel)]="request.quantity" (keypress)="onlyNumberKey($event)" (keyup)="onChange($event)" placeholder="Monto a solicitar" required maxlength="7">						    <span *ngIf="!quantity.valid && quantity.touched" class="text-danger">El monto no es válido</span>						</div>						<div class="custom-control custom-checkbox">						  <input type="checkbox" class="custom-control-input" id="card" name="card" #card="ngModel" [(ngModel)]="request.card">						  <label class="custom-control-label" for="card">¿Tiene tarjeta de crédito?</label>						</div>						<br>						<div class="form-group">						    <label for="age" class="font-weight-bold">¿Edad?</label>						    <input type="text" class="form-control" id="age" name="age" #age="ngModel" [(ngModel)]="request.age" placeholder="Edad" required (keypress)="onlyNumberKey($event)" minlength="2" maxlength="2">						    <span *ngIf="!age.valid && age.touched" class="text-danger">La edad no es válido</span>						</div>						<div class="form-group">						    <label for="dead_line" class="font-weight-bold">¿En cuánto tiempo lo quieres pagar?</label>						    <select class="form-control" id="dead_line" name="dead_line" #dead_line="ngModel" [(ngModel)]="request.dead_line" (change)="onChange($event)" required>							      <option [value]="5">3 Meses</option>							      <option [value]="7">6 Meses</option>							      <option [value]="12">9 Meses</option>							</select>							<span *ngIf="!dead_line.valid && dead_line.touched" class="text-danger">El plazo no es válido</span>												    </div>					    <div *ngIf="request.dead_line && request.quantity" class="form-group">						    	<label for="total" class="font-weight-bold">Pago Total</label>						    	<input type="number" class="form-control" id="total" name="total" #total="ngModel" [(ngModel)]="request.total" disabled required>						    </div>					  	<div class="form-group">		                    <button type="submit" class="btn btn-primary" [disabled]="!requestForm.valid">		                        Guardar		                    </button>		                </div>				  		<div class="mt-3">					  		<div class="alert alert-success" *ngIf="status == \'success\'" >						    	Solicitud generada !!						 	</div>							<div class="alert alert-danger" *ngIf="status == \'error\'" >							    No se pudo generar la solicitud !!							</div>						</div>					</form>				</div>			</div>		</div>	</div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateRequestsComponent', 'selector': 'app-create-requests'},{'name': 'CreditHistoryComponent', 'selector': 'app-credit-history'},{'name': 'DetailRequestsComponent', 'selector': 'app-detail-requests'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'RegisterComponent', 'selector': 'app-register'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CreateRequestsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CreateRequestsComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

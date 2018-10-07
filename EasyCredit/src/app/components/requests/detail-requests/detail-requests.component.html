@@ -1,0 +1,43 @@
+<div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-12 col-md-10 col-lg-8 p-5">
+			<div class="card shadow">				
+				<div class="card-body">
+
+					<div class="d-flex justify-content-start">
+						<h2 class="display-5 text-info">Solicitudes</h2>
+					</div>
+
+					<hr>
+
+					<div class="d-flex justify-content-end">
+						<a class="btn btn-primary" routerLink="/create-request" role="button"><i class="fa fa-plus"></i> Nueva Solicitud</a>
+					</div>
+
+					<table class="table">
+					  <thead class="thead-light">
+					    <tr>
+					      <th scope="col">Monto</th>
+					      <th scope="col">Plazo</th>
+					      <th scope="col">Total a pagar</th>
+					      <th scope="col">Estatus</th>
+					    </tr>
+					  </thead>
+					  <tbody *ngFor="let request of requests">
+					    <tr *ngIf="request.status == 1">
+					      <td>{{ request.quantity }}</td>
+					      <td>
+					      	<span *ngIf="request.dead_line == 5">3 Meses</span>
+					      	<span *ngIf="request.dead_line == 7">6 Meses</span>
+					      	<span *ngIf="request.dead_line == 12">9 Meses</span>
+					      </td>
+					      <td>{{ request.total }}</td>
+					      <td><span class="badge badge-info">Pendiente</span></td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

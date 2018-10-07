@@ -1,0 +1,42 @@
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-12 col-md-10 col-lg-8 p-5">
+			<div class="card shadow">
+				<div class="card-body">
+					<div class="d-flex justify-content-start">
+						<h2 class="display-5 text-info">Información de Usuario</h2>
+					</div>
+
+					<hr>
+					<div class="d-flex flex-column d-md-flex flex-md-row">
+						<div class="d-flex flex-column">
+							<div class="p-2">
+							<i class="fa fa-user" style="font-size: 200px;"></i>
+							</div>
+
+							<div class="p-2">
+						        <label for="name" class="text-info">{{ identity.username }}</label>
+						    </div>
+						</div>
+
+							<table class="table table-bordered table-striped m-1" >
+							  <thead class="thead-light">
+							    <tr>
+							      <th scope="col">Solicitud</th>
+							      <th scope="col">Estatus</th>
+							    </tr>
+							  </thead>
+							  <tbody *ngFor="let request of requests">
+							    <tr  *ngIf="request.status == 1">
+							      <td>{{ request.quantity }}</td>
+							      <td><span class="badge badge-info">Pendiente</span></td>
+							    </tr>
+							  </tbody>
+							</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
